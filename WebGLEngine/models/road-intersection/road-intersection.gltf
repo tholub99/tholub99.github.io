@@ -1,0 +1,186 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "Open Asset Import Library (assimp v4.1.68217300)"
+  },
+  "accessors": [
+    {
+      "bufferView": 0,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 593,
+      "type": "VEC3",
+      "max": [
+        1500.0020751953125,
+        -0.0000476837158203125,
+        1499.9996337890625
+      ],
+      "min": [
+        -1500.0020751953125,
+        -600.00048828125,
+        -1499.9996337890625
+      ]
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 593,
+      "type": "VEC3",
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -0.000069141220592428,
+        -1
+      ]
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 0,
+      "componentType": 5126,
+      "count": 593,
+      "type": "VEC2",
+      "max": [
+        0.8539965152740479,
+        0.6146128177642822
+      ],
+      "min": [
+        0.04849795997142792,
+        0.15002578496932983
+      ]
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 0,
+      "componentType": 5123,
+      "count": 1428,
+      "type": "SCALAR",
+      "max": [
+        592
+      ],
+      "min": [
+        0
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "road-intersection_data.bin",
+      "byteLength": 21832
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 7116,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7116,
+      "byteLength": 7116,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14232,
+      "byteLength": 4744,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18976,
+      "byteLength": 2856,
+      "target": 34963
+    }
+  ],
+  "images": [
+    {
+      "uri": "atlas-albedo-LPUP.png"
+    },
+    {
+      "uri": "atlas-emission-LPUP.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "atlas_LPUP",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.9896013736724854
+      },
+      "emissiveTexture": {
+        "index": 1
+      },
+      "emissiveFactor": [
+        0.2199999988079071,
+        0.2199999988079071,
+        0.2199999988079071
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Scene",
+      "primitives": [
+        {
+          "mode": 4,
+          "material": 0,
+          "indices": 3,
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ]
+    },
+    {
+      "name": "node",
+      "children": [
+        2
+      ]
+    },
+    {
+      "name": "tile_road_intersection",
+      "mesh": 0
+    }
+  ],
+  "samplers": [
+    {},
+    {}
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0,
+      "sampler": 0
+    },
+    {
+      "source": 1,
+      "sampler": 1
+    }
+  ],
+  "scene": 0
+}

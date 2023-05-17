@@ -1,0 +1,1 @@
+Simply run a python http server from the main directory to view the program

@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: verdana, sans-serif;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+iframe{
+    width: 400px;
+    height: 250px;
+}
+
+.header{
+    height: 100px;
+    background: #34495e;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.intro{
+    padding: 20px;
+    height: 250px;
+    color: #ffffff;
+    text-align: right;
+    padding-top: 50px;
+    line-height: 30px;
+    background: #1E1E1E;
+    background-image: url("../images/backdropcode.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto;
+}
+
+.socialIcons img{
+    width: 50px;
+    height: 50px;
+}
+
+.navigation{
+    text-align: center;
+    line-height: 100px;
+}
+.navigation a{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+.show-menu,.hide-menu{
+    transition: 0.4s;
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+}
+.show-menu{
+    float: left;
+}
+.show-menu{
+    line-height: 100px;
+}
+.navigation a:hover,.show-menu:hover,.hide-menu:hover{
+    color: #3498db;
+}
+
+.content{
+    margin: auto;
+    width: 95%;
+    padding: 20px;
+    text-align: center;
+}
+.content .item{
+    display: inline-block;
+    width: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+.content .imgItem img{
+    width: 40%;
+}
+
+.thinbtn{
+    padding: 10px;
+    background: none;
+    border: 5px solid;
+    color: #338ad6;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    transition: 0.4s;
+}
+.thinbtn::before,.thinbtn::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 6px;
+    background: #1E1E1E;
+    transition: 0.4s;
+}
+.content .thinbtn::before, .content .thinbtn::after, .extra .thinbtn::before, .extra .thinbtn::after{
+    background: #ffffff;
+}
+.thinbtn::before{
+    top: -5px;
+    left: 10%;
+}
+.thinbtn::after{
+    bottom: -5px;
+    right: 10%;
+}
+.thinbtn:hover::before{
+    left: 80%;
+}
+.thinbtn:hover::after{
+    right: 80%;
+}
+.thinbtn:hover{
+    color: #15436b;
+}
+
+#check{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+#currentPg{
+    color: #3498db;
+}
+
+#check:checked ~ .navigation{
+        left: 0;
+    }
+
+.squareImg{
+    width: 50%;
+    height: 50%;
+}
+
+#titleImg{
+    padding-top: 10px;
+    width: 50%;
+}
+
+@media screen and (max-width:720px){
+    .show-menu,.hide-menu{
+        display: block;
+    }
+    .hide-menu{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .navigation{
+        position: fixed;
+        width: 40%;
+        height: 100vh;
+        background: #333333;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .navigation a{
+        display: block;
+        padding: 20px;
+    }
+    #check:checked ~ .navigation{
+        left: 0;
+    }
+}
+.description{
+    text-align: center;
+    width: 100%;
+    background: #e3e3e3;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.description h2{
+    font-size: 40px;
+    font-weight: 450;
+}
+.description p{
+    padding: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 20px;
+}
+
+.extra{
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 50px;
+}
+
+.extra h2{
+    padding: 20px;
+}
+
+.extra p{
+    padding-bottom: 20px;
+}
+
+.btnContainer{
+    padding: 20px;
+    line-height: 30px;
+}

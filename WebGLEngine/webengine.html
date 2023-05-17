@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://greggman.github.io/webgl-lint/webgl-lint.js" crossorigin></script>
+		<script type="text/javascript" src="./WebGLEngine/Common/initShaders2.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/Common/MVnew.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/gltf/glTF.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/Camera.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/Lights.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/transform.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/gameobject.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/CarController.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/Object3D.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/Shader.js"></script>
+		<script type="text/javascript" src="./WebGLEngine/app.js"></script>
+
+		<link href="css/portfoliostylesheet.css" rel="stylesheet">
+		<title>Tristan Holub - Portfolio</title>
+		<style>
+			table, th, td {
+			  border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+            <input type="checkbox" id="check">
+            <label for="check" class="show-menu">&#9776;</label>
+            <nav class="navigation">
+                <a id="currentPg" href="#">Home</a>
+                <a href="heavymetal.html">Heavy Metal</a>
+                <a href="stratosfarm.html">Stratos Farm</a>
+                <a href="projectsolar.html">Project: Solar</a>
+                <a href="webengine.html">WebGL Game Engine</a>
+                <label for="check" class="hide-menu">&#x1F5D9;</label>
+            </nav>
+        </div>
+		<canvas id="gl-canvas" width="512" height="512">
+			Not supported
+		</canvas>
+		<p>
+			Controls: <br>
+			WASD To Drive<br>
+			Space to swap between Bird's Eye and 3rd Person cameras <br>
+			Click on another car to swap your ride!
+
+			This demo uses glTF models based on the glTF2.0 specification! <br>
+			(No external libs. Model Loader is built from scratch)
+		</p>
+		<a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.pdf">glTF Spec my loader is based on</a> <br>
+		<a href="https://learnopengl.com/">Go to Graphics Resource</a><br /><br />
+		<table>
+			<th>Component</th>
+			<th>Fulfillment</th>
+			<tr>
+				<td>A 3D World</td>
+				<td>Customized 3D World using glTF Models</td>
+			</tr>
+			<tr>
+				<td>Camera 1</td>
+				<td>3rd Person Follow Cam</td>
+			</tr>
+			<tr>
+				<td>Camera 2</td>
+				<td>Top Down Follow Cam</td>
+			</tr>
+			<tr>
+				<td>Textures</td>
+				<td>All models are textured with texcoords</td>
+			</tr>
+			<tr>
+				<td>Light Source</td>
+				<td>Sun-representative light in the top corner of world</td>
+			</tr>
+			<tr>
+				<td>Animation</td>
+				<td>Car driving, Train moving</td>
+			</tr>
+			<tr>
+				<td>Picking</td>
+				<td>You can select other cars by clicking to change active vehicle</td>
+			</tr>
+			<tr>
+				<td>Dynamic Objects</td>
+				<td>Train despawn/respawn, car load on vehicle swap</td>
+			</tr>
+			<tr>
+				<td>Extra Geometry</td>
+				<td>The complex 3D models are definitely new</td>
+			</tr>
+			<tr>
+				<td>Advanced Concepts</td>
+				<td>Shadow Map</td>
+			</tr>
+		</table>
+	</body>
+</html>
