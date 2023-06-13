@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/portfoliostylesheet.css" rel="stylesheet">
+		<title>Tristan Holub - Portfolio</title>
+		<script> </script>
+	</head>
+	<body>
+		<div class="header">
+			<input type="checkbox" id="check">
+			<label for="check" class="show-menu">&#9776;</label>
+			<nav class="navigation">
+				<a href="index.html">Home</a>
+				<a id="currentPg" href="#">Sprouting Spirit</a>
+				<a href="webengine.html">WebGL Game Engine</a>
+				<a href="heavymetal.html">Heavy Metal</a>
+				<a href="stratosfarm.html">Stratos Farm</a>
+				<a href="projectsolar.html">Project: Solar</a>
+				<label for="check" class="hide-menu">&#x1F5D9;</label>
+			</nav>
+		</div>
+		<div class="description">
+			<h2>Sprouting Spirit: Dream Duo</h2>
+			<p>Sprouting Spirit: Dream Duo is a 3D puzzle platformer that takes you on an adventure through the fantastical world of Maple's imagination. 
+				As a new resident in the bustling city, Maple is afraid and overwhelmed and seeks solace in her own imaginary world. 
+				But alongside her new imaginary friend Cornelius, she'll learn to overcome challenges and face her fears.</p>
+		</div>
+		
+		<div class="content">
+			<h2>Game Trailer</h2>
+			<iframe width="1280" height="720" src="https://www.youtube.com/embed/7NMBf-fzNts" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="extra">
+			<div class="btnContainer">
+				<a class="thinbtn" href="https://sproutingspiritgame.com/game/" target="_blank">Play The Game</a>
+			</div>
+		</div>
+		<div class="about">
+			<h2>About</h2>
+			<p>
+				In the development of Sprouting Spirit: Dream Duo, I served as a gameplay programmer as well as took on the roll of lead tools developer. 
+				In order to create such unique and visual worlds our team put a big focus on custom internal tooling. The tool that I headed was our spline platforming tool. 
+				This spline tool allowed for our designers to easily create and modify custom platforms and decorations in the levels.
+				<br><br>
+				The tool was built on top of a generalist spline package for unity that we were able to create interfaces for in the editor. 
+				These interfaces allowed for the designers to easily create new platforms with our custom presets or convert blockout geometry into platforms easily without the need to build from scratch, as well as adjust features like spawn animations, height, borders, materials, and spacing (for bridge and fence posts).
+				<br><br>
+				This tool also goes above just platform generation and also generates a custom combined mesh for the platforms at runtime to increase performance and collision detection.
+				<br><br>
+				Almost 90% of the static platforms in game were made with this tool, as well as many level decorations such as fences and bridges
+			</p>
+		</div>
+		<div class="content">
+			<div class="imgItem">
+				<img src="images/lvl1.jpeg" alt="SS1">
+				<img src="images/lvl2.jpeg" alt="SS2">
+				<img src="images/lvl3.jpeg" alt="SS3">
+				<img src="images/lvl4.jpeg" alt="SS4">
+				<img src="images/portfolioSplineDemo.gif" alt="SSDemo">
+				<img src="images/platformBuildDemo.gif" alt="SSBuild">
+			</div>				
+		</div>
+	</body>
+</html>

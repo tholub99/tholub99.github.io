@@ -71,6 +71,13 @@ iframe{
     color: #3498db;
 }
 
+.about{
+    margin: auto;
+    width: 75%;
+    padding: 20px;
+    text-align: justify;
+}
+
 .content{
     margin: auto;
     width: 95%;
