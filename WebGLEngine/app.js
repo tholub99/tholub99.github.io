@@ -246,10 +246,9 @@ function ToggleCamera()
 
 function HandleClick(event)
 {
-    var pX = event.pageX;
-    var pY = event.pageY;
-    let x = 2 * (pX / canvas.width) - 1;
-    let y = 1 - 2 * (pY / canvas.height);
+    var mousePos = GetRelativeMousePosition(event);
+    let x = 2 * (mousePos.x / canvas.width) - 1;
+    let y = 1 - 2 * (mousePos.y / canvas.height);
     let pFront = vec4(x, y, -1, 1);
     let pCam = mult(inverse(cam1Active ? camera1.projectionMatrix : camera2.projectionMatrix), pFront);
     pCam = vec4(pCam[0], pCam[1], -1, 1);
@@ -259,14 +258,11 @@ function HandleClick(event)
     let ray = normalize(subtract(vec3(pWorld[0], pWorld[1], pWorld[2]), cam1Active ? camera1.pos : camera2.pos));
 
     let clickedControllers = [];
-    carControllers.forEach(controller => {
+    carControllers.filter(e => e != activeCarController).forEach(controller => {
         if(controller.CheckCollision(ray, origin))
         {
-            if(controller != activeCarController)
-            {
-                console.log("Car Clicked");
-                clickedControllers.push(controller);
-            }
+            console.log("Car Clicked");
+            clickedControllers.push(controller);
         }
     });
 
@@ -286,6 +282,17 @@ function HandleClick(event)
         {
             activeCarController = clickedControllers[0];
         }
+    }
+}
+
+function GetRelativeMousePosition(event)
+{
+    var target = event.target;
+    var rect = target.getBoundingClientRect();
+
+    return {
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top,
     }
 }
 

@@ -54,9 +54,18 @@ class CarController
         let model = this.car.model;
         this.OBB = {};
         let p1 = mult(this.car.transform.modelMatrix, vec4(model.minX, model.minY, model.minZ, 1.0));
-        this.OBB.p1 = vec3(p1[0], p1[1], p1[2]);
         let p2 = mult(this.car.transform.modelMatrix, vec4(model.maxX, model.maxY, model.maxZ, 1.0));
-        this.OBB.p2 = vec3(p2[0], p2[1], p2[2]);
+
+        this.OBB.p1 = vec3(
+            p1[0] < p2[0] ? p1[0] : p2[0],
+            p1[1] < p2[1] ? p1[1] : p2[1],
+            p1[2] < p2[2] ? p1[2] : p2[2]
+        );
+        this.OBB.p2 = vec3(
+            p1[0] > p2[0] ? p1[0] : p2[0],
+            p1[1] > p2[1] ? p1[1] : p2[1],
+            p1[2] > p2[2] ? p1[2] : p2[2]
+        );
 
         this.OBB.forward = this.car.transform.forward;
         this.OBB.right = this.car.transform.right;
